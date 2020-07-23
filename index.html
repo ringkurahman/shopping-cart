@@ -82,106 +82,161 @@
    // First cart item Plus
    const itemBtn1 = document.getElementById('itemPlus1');
    itemBtn1.addEventListener('click', function(){
-      const quantity = document.getElementById('quantity1').value;
-      const quantityNumber = parseFloat(quantity);
-      const totalQuantity = quantityNumber + 1;
-      document.getElementById('quantity1').value = totalQuantity;
+      // const quantity = document.getElementById('quantity1').value;
+      // const quantityNumber = parseFloat(quantity);
+      // const totalQuantity = quantityNumber + 1;
+      // document.getElementById('quantity1').value = totalQuantity;
+      quantity('quantity1');
 
-      const itemPrice1 = document.getElementById('price1').innerText;
-      const priceMoney = parseFloat(itemPrice1);
-      const topTotalPrice = priceMoney + 1219;
-      document.getElementById('price1').innerText = topTotalPrice;
+      // const itemPrice1 = document.getElementById('price1').innerText;
+      // const priceMoney = parseFloat(itemPrice1);
+      // const topTotalPrice = priceMoney + 1219;
+      // document.getElementById('price1').innerText = topTotalPrice;
+      document.getElementById('price1').innerText = price1('price1');
 
-      const subPrice = document.getElementById('subPrice').innerText;
-      const subPriceMoney = parseFloat(subPrice);
-      const subTotalPrice = subPriceMoney + 1219;
-      document.getElementById('subPrice').innerText = subTotalPrice;
+      // const subPrice = document.getElementById('subPrice').innerText;
+      // const subPriceMoney = parseFloat(subPrice);
+      // const subTotalPrice = subPriceMoney + 1219;
+      // document.getElementById('subPrice').innerText = subTotalPrice;
+      document.getElementById('subPrice').innerText = price1('subPrice');
 
-      const tax = document.getElementById('tax').innerText;
-      const taxPrice = parseFloat(tax);
+      // const tax = document.getElementById('tax').innerText;
+      // const taxPrice = parseFloat(tax);
 
-      const total = document.getElementById('total').innerText;
-      const totalMoney = parseFloat(total);
-      const finalTotal = totalMoney + 1219 + taxPrice;
-      document.getElementById('total').innerText = finalTotal;
+      // const total = document.getElementById('total').innerText;
+      // const totalMoney = parseFloat(total);
+      // const finalTotal = totalMoney + 1219 + taxPrice;
+      // document.getElementById('total').innerText = finalTotal;
+      document.getElementById('total').innerText = price1('total');
    })
    // Second cart item plus
    const itemBtn2 = document.getElementById('itemPlus2');
    itemBtn2.addEventListener('click', function(){
-      const secondQuantity = document.getElementById('quantity2').value;
-      const secondQuantityNumber = parseFloat(secondQuantity);
-      const secondTotalQuantity = secondQuantityNumber + 1;
-      document.getElementById('quantity2').value = secondTotalQuantity;
+      // const secondQuantity = document.getElementById('quantity2').value;
+      // const secondQuantityNumber = parseFloat(secondQuantity);
+      // const secondTotalQuantity = secondQuantityNumber + 1;
+      // document.getElementById('quantity2').value = secondTotalQuantity;
+      quantity('quantity2');
 
-      const itemPrice2 = document.getElementById('price2').innerText;
-      const secondPriceMoney = parseFloat(itemPrice2);
-      const secondTopTotalPrice = secondPriceMoney + 59;
-      document.getElementById('price2').innerText = secondTopTotalPrice;
+      // const itemPrice2 = document.getElementById('price2').innerText;
+      // const secondPriceMoney = parseFloat(itemPrice2);
+      // const secondTopTotalPrice = secondPriceMoney + 59;
+      // document.getElementById('price2').innerText = secondTopTotalPrice;
+      document.getElementById('price2').innerText = price('price2');
 
-      const secondSubPrice = document.getElementById('subPrice').innerText;
-      const secondSubPriceMoney = parseFloat(secondSubPrice);
-      const secondSubTotalPrice = secondSubPriceMoney + 59;
-      document.getElementById('subPrice').innerText = secondSubTotalPrice;
+      // const secondSubPrice = document.getElementById('subPrice').innerText;
+      // const secondSubPriceMoney = parseFloat(secondSubPrice);
+      // const secondSubTotalPrice = secondSubPriceMoney + 59;
+      // document.getElementById('subPrice').innerText = secondSubTotalPrice;
+      document.getElementById('subPrice').innerText = price('subPrice');
 
-      const secondTax = document.getElementById('tax').innerText;
-      const secondTaxPrice = parseFloat(secondTax);
+      // const secondTax = document.getElementById('tax').innerText;
+      // const secondTaxPrice = parseFloat(secondTax);
 
-      const secondTotal = document.getElementById('total').innerText;
-      const secondTotalMoney = parseFloat(secondTotal);
-      const secondFinalTotal = secondTotalMoney + 59 + secondTaxPrice;
-      document.getElementById('total').innerText = secondFinalTotal;
+      // const secondTotal = document.getElementById('total').innerText;
+      // const secondTotalMoney = parseFloat(secondTotal);
+      // const secondFinalTotal = secondTotalMoney + 59 + secondTaxPrice;
+      // document.getElementById('total').innerText = secondFinalTotal;
+      document.getElementById('total').innerText = price('total');
    })
+
    // First cart item minus
    const itemMinus1 = document.getElementById('itemMinus1');
    itemMinus1.addEventListener('click', function(){
-      const minusQuantity = document.getElementById('quantity1').value;
-      const minusQuantityNumber = parseFloat(minusQuantity);
-      const minusQuantityTotal = minusQuantityNumber - 1;
-      document.getElementById('quantity1').value = minusQuantityTotal;
+      // const minusQuantity = document.getElementById('quantity1').value;
+      // const minusQuantityNumber = parseFloat(minusQuantity);
+      // const minusQuantityTotal = minusQuantityNumber - 1;
+      // document.getElementById('quantity1').value = minusQuantityTotal;
+      quantityMinus('quantity1');
 
-      const minusItemPrice1 = document.getElementById('price1').innerText;
-      const minusPriceMoney = parseFloat(minusItemPrice1);
-      const minusTopTotalPrice = minusPriceMoney - 1219;
-      document.getElementById('price1').innerText = minusTopTotalPrice;
+      // const minusItemPrice1 = document.getElementById('price1').innerText;
+      // const minusPriceMoney = parseFloat(minusItemPrice1);
+      // const minusTopTotalPrice = minusPriceMoney - 1219;
+      // document.getElementById('price1').innerText = minusTopTotalPrice;
+      document.getElementById('price1').innerText = minusPrice('price1');
 
-      const minusSubPrice = document.getElementById('subPrice').innerText;
-      const minusSubPriceMoney = parseFloat(minusSubPrice);
-      const minusSubTotalPrice = minusSubPriceMoney - 1219;
-      document.getElementById('subPrice').innerText = minusSubTotalPrice;
+      // const minusSubPrice = document.getElementById('subPrice').innerText;
+      // const minusSubPriceMoney = parseFloat(minusSubPrice);
+      // const minusSubTotalPrice = minusSubPriceMoney - 1219;
+      // document.getElementById('subPrice').innerText = minusSubTotalPrice;
+      document.getElementById('subPrice').innerText = minusPrice('subPrice');
 
-      const minusTax = document.getElementById('tax').innerText;
-      const minusTaxPrice = parseFloat(tax);
+      // const minusTax = document.getElementById('tax').innerText;
+      // const minusTaxPrice = parseFloat(tax);
 
-      const minusTotal = document.getElementById('total').innerText;
-      const minusTotalMoney = parseFloat(minusTotal);
-      const minusFinalTotal = minusTotalMoney - 1219;
-      document.getElementById('total').innerText = minusFinalTotal;
+      // const minusTotal = document.getElementById('total').innerText;
+      // const minusTotalMoney = parseFloat(minusTotal);
+      // const minusFinalTotal = minusTotalMoney - 1219;
+      // document.getElementById('total').innerText = minusFinalTotal;
+      document.getElementById('total').innerText = minusPrice('total');
    })
    // Second cart item minus
    const itemMinus2 = document.getElementById('itemMinus2');
    itemMinus2.addEventListener('click', function(){
-      const secondMinusQuantity = document.getElementById('quantity2').value;
-      const secondMinusQuantityNumber = parseFloat(secondMinusQuantity);
-      const secondMinusQuantityTotal = secondMinusQuantityNumber - 1;
-      document.getElementById('quantity2').value = secondMinusQuantityTotal;
+      // const secondMinusQuantity = document.getElementById('quantity2').value;
+      // const secondMinusQuantityNumber = parseFloat(secondMinusQuantity);
+      // const secondMinusQuantityTotal = secondMinusQuantityNumber - 1;
+      // document.getElementById('quantity2').value = secondMinusQuantityTotal;
+      quantityMinus('quantity2');
 
-      const minusItemPrice2 = document.getElementById('price2').innerText;
-      const minusPriceMoney2 = parseFloat(minusItemPrice2);
-      const minusTopTotalPrice2 = minusPriceMoney2 - 59;
-      document.getElementById('price2').innerText = minusTopTotalPrice2;
+      // const minusItemPrice2 = document.getElementById('price2').innerText;
+      // const minusPriceMoney2 = parseFloat(minusItemPrice2);
+      // const minusTopTotalPrice2 = minusPriceMoney2 - 59;
+      // document.getElementById('price2').innerText = minusTopTotalPrice2;
+      document.getElementById('price2').innerText = minusItemPrice('price2');
 
-      const minusSubPrice2 = document.getElementById('subPrice').innerText;
-      const minusSubPriceMoney2 = parseFloat(minusSubPrice2);
-      const minusSubTotalPrice2 = minusSubPriceMoney2 - 59;
-      document.getElementById('subPrice').innerText = minusSubTotalPrice2;
+      // const minusSubPrice2 = document.getElementById('subPrice').innerText;
+      // const minusSubPriceMoney2 = parseFloat(minusSubPrice2);
+      // const minusSubTotalPrice2 = minusSubPriceMoney2 - 59;
+      // document.getElementById('subPrice').innerText = minusSubTotalPrice2;
+      document.getElementById('subPrice').innerText = minusItemPrice('subPrice');
 
-      const minusTax2 = document.getElementById('tax').innerText;
-      const minusTaxPrice2 = parseFloat(tax);
+      // const minusTax2 = document.getElementById('tax').innerText;
+      // const minusTaxPrice2 = parseFloat(tax);
 
-      const minusTotal2 = document.getElementById('total').innerText;
-      const minusTotalMoney2 = parseFloat(minusTotal2);
-      const minusFinalTotal2 = minusTotalMoney2 - 59;
-      document.getElementById('total').innerText = minusFinalTotal2;
+      // const minusTotal2 = document.getElementById('total').innerText;
+      // const minusTotalMoney2 = parseFloat(minusTotal2);
+      // const minusFinalTotal2 = minusTotalMoney2 - 59;
+      // document.getElementById('total').innerText = minusFinalTotal2;
+      document.getElementById('total').innerText = minusItemPrice('total');
    })
+   // Cart handle plus function
+   function quantity(id){
+      const Quantity = document.getElementById(id).value;
+      const QuantityNumber = parseFloat(Quantity);
+      const TotalQuantity = QuantityNumber + 1;
+      document.getElementById(id).value = TotalQuantity;
+   }
+   function price1(id){
+      const itemPrice1 = document.getElementById(id).innerText;
+      const priceMoney1 = parseFloat(itemPrice1);
+      const TotalPrice1 = priceMoney1 + 1219;
+      return TotalPrice1;
+   }
+   function price(id){
+      const itemPrice2 = document.getElementById(id).innerText;
+      const priceMoney2 = parseFloat(itemPrice2);
+      const TotalPrice2 = priceMoney2 + 59;
+      return TotalPrice2;
+   }
+   // Cart handle minus function
+   function quantityMinus(id){
+      const minusQuantity = document.getElementById(id).value;
+      const minusQuantityNumber = parseFloat(minusQuantity);
+      const minusTotalQuantity = minusQuantityNumber - 1;
+      document.getElementById(id).value = minusTotalQuantity;
+   }
+   function minusPrice(id){
+      const minusItemPrice1 = document.getElementById(id).innerText;
+      const minusPriceMoney1 = parseFloat(minusItemPrice1);
+      const minusTotalPrice1 = minusPriceMoney1 - 1219;
+      return minusTotalPrice1;
+   }
+   function minusItemPrice(id){
+      const minusItemPrice = document.getElementById(id).innerText;
+      const minusPriceMoney = parseFloat(minusItemPrice);
+      const minusTotalPrice = minusPriceMoney - 59;
+      return minusTotalPrice;
+   }
 </script>
 </html>
