@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Detail</title>
+  </head>
+  <body>
+    <h1>This is for e-Commerce cart detail</h1>
+
+    <script>
+
+    // Global variable
+      var cart = [];
+
+    // Create and object
+      function Item(name, price, count) {
+        this.name = name;
+        this.price = price;
+        this.count = count;
+      };
+
+      // Add items to the cart array with price and count
+      function addItemToCart(name, price, count){
+          for(var i in cart){
+              if(cart[i].name === name){
+                  cart[i].price += price
+                  cart[i].count += count;
+                  return;
+              }
+          }
+          var item = new Item (name, price, count);
+          cart.push(item);
+      }
+
+      addItemToCart('Apple', 1.99, 1);
+      addItemToCart('Orange', 1.80, 3);
+      addItemToCart('Apple', 3.98, 2);
+      addItemToCart('Banana', 1.25, 1);
+
+      console.log(cart);
+      console.log(cart[0]);
+      console.log(cart[1]);
+      console.log(cart[2]);
+      console.log(cart[0].name);
+      console.log(cart[1].name);
+      console.log(cart[2].name);
+
+      // Remove Items to the cart array
+      function removeItemFromCart(name, price){
+          for(var i in cart){
+              if(cart[i].name === name){
+                  cart[i].count --;
+                  if(cart[i].count === 0){
+                      cart.splice(i, 1);
+                  }
+                  return;
+              }
+          }
+      }
+
+      removeItemFromCart('Apple');
+      removeItemFromCart('Apple');
+
+      console.log(cart);
+      console.log(cart[0]);
+      console.log(cart[1]);
+      console.log(cart[2]);
+
+      // Remove all Items from cart array by using name
+      function removeItemFromCartAll(name){
+          for(var i in cart){
+              if(cart[i].name === name){
+                  cart.splice(i, 1);
+                  return;
+              }
+          }
+      }
+
+      removeItemFromCartAll('Orange')
+
+      console.log(cart)
+      console.log(cart[0]);
+      console.log(cart[1]);
+      console.log(cart[2]);
+
+    </script>
+  </body>
+</html>
